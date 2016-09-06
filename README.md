@@ -3,7 +3,7 @@
 **Quick Introduction how to Download [Egghead Videos](https://egghead.io/) for Offline View.**
 
 Please remember that these guys make a great job and invest lots of time to provide these usefull information.
-So consider to support them, [sign up](https://egghead.io/users/sign_up) or share the content or whatever ...
+That said consider to support them for their great work and [Sign Up](https://egghead.io/users/sign_up) for a free account, follow them on [Twitter](https://twitter.com/eggheadio), share their content or whatever ...
 I'm traveling and the Hotel internet sucks hard, so i share this infos for others with slow and anoying internet connections.
 
 ## Installation
