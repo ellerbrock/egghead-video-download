@@ -19,8 +19,7 @@ I'm traveling and the Hotel internet sucks hard, so i share this infos for other
 ### Javascript Code
 
 ```javascript
-const linkList = Array.from(document.querySelectorAll('.title a'));
-linkList.forEach((link) => console.log(link.href));
+document.querySelectorAll('.title a').forEach(link => console.log(link.href))
 ```
 
 Save the Output in a Textfile list.txt and run:
