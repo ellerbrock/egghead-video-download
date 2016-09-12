@@ -8,13 +8,6 @@ I'm traveling and the Hotel internet sucks hard, so i share this infos for other
 
 ## Installation
 
-### jQuery Injector (Chrome Plugin)
-
-<https://chrome.google.com/webstore/detail/inject-jquery/indebdooekgjhkncmgbkeopjebofdoid>
-
-Load the Website and press the jQuery Button.  
-You can run now jQuery Commands from the Console on this Website.
-
 ### Youtube Downloader
 
 <https://github.com/rg3/youtube-dl>
@@ -25,12 +18,12 @@ You can run now jQuery Commands from the Console on this Website.
 
 ### Javascript Code
 
-```
-const links = $('.title a')
-for(let x = 0, len = links.length; x < len; x++) { console.log(links[x].href) }
+```javascript
+const linkList = Array.from(document.querySelectorAll('.title a'));
+linkList.forEach((link) => console.log(link.href));
 ```
 
-Save the Output in a Textfile and run:
+Save the Output in a Textfile list.txt and run:
 
 ## Download
 
