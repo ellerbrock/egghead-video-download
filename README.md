@@ -26,7 +26,7 @@ Save the Output in a Textfile list.txt and run:
 
 ## Download
 
-`youtube-dl -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt`
+`youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt`
 
 # Contact / Social Media
 
