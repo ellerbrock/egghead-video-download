@@ -18,11 +18,44 @@ I'm traveling and the Hotel internet sucks hard, so i share this infos for other
 
 ### Javascript Code
 
+#### Solution 1: Collect all links and copy them direct to the clipboard.
+
+Execute the snippet and past it into a Textfile to download later via the Youtube Downloader.
+
+```javascript
+let a=[];document.querySelectorAll('.title a').forEach(l => a.push(l.href));copy(a.join('\n'));
+```
+*Info: Clipboard support may not work with every Browser: <http://caniuse.com/#feat=clipboard>.*
+
+
+#### Solution 2: Print the collected links to the console via console.dir
+
+```javascript
+document.querySelectorAll('.title a').forEach(l => console.dir(l.href))
+```
+
+The tip to use [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir) came from [tucq88](https://github.com/tucq88) who run in some issues with to long URL's which Chrome shorten via "...".
+
+*Info: console.dir is not an official standard yet it may or may not work in your current Browser.*
+
+
+#### Solution 3: Collect the links and print the Array Object
+
+```javascript
+let a=[];document.querySelectorAll('.title a').forEach(l => a.push(l.href));console.log(a);
+```
+
+
+#### Solution 4: Print collected links via console.log
+
 ```javascript
 document.querySelectorAll('.title a').forEach(link => console.log(link.href))
 ```
 
-Save the Output in a Textfile list.txt and run:
+This was the original solution but can cause problems with too long URL's which the Browser shorten between with "...".
+
+
+Save the collected links in a Textfile `list.txt` and run:
 
 ## Download
 
