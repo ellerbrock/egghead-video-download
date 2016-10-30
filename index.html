@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Egghead Video Download by ellerbrock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Egghead Video Download</h1>
+      <h2 class="project-tagline">introduction how to download egghead videos for offline view</h2>
+      <a href="https://github.com/ellerbrock/egghead-video-download" class="btn">View on GitHub</a>
+      <a href="https://github.com/ellerbrock/egghead-video-download/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ellerbrock/egghead-video-download/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="egghead-video-download" class="anchor" href="#egghead-video-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Egghead Video Download</h1>
+
+<p><strong>Quick Introduction how to Download <a href="https://egghead.io/">Egghead Videos</a> for Offline View.</strong></p>
+
+<p>Please remember that these guys make a great job and invest lots of time to provide these usefull information.
+That said consider to support them for their great work and <a href="https://egghead.io/users/sign_up">Sign Up</a> for a free account, follow them on <a href="https://twitter.com/eggheadio">Twitter</a>, share their content or whatever ...
+I'm traveling and the Hotel internet sucks hard, so i share this infos for others with slow and anoying internet connections.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="youtube-downloader" class="anchor" href="#youtube-downloader" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Youtube Downloader</h3>
+
+<p><a href="https://github.com/rg3/youtube-dl">https://github.com/rg3/youtube-dl</a></p>
+
+<p><code>brew install youtube-dl</code></p>
+
+<h2>
+<a id="get-links" class="anchor" href="#get-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get Links</h2>
+
+<h3>
+<a id="javascript-code" class="anchor" href="#javascript-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Javascript Code</h3>
+
+<h4>
+<a id="solution-1-collect-all-links-and-copy-them-direct-to-the-clipboard" class="anchor" href="#solution-1-collect-all-links-and-copy-them-direct-to-the-clipboard" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution 1: Collect all links and copy them direct to the clipboard.</h4>
+
+<p>Execute the snippet and past it into a Textfile to download later via the Youtube Downloader.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> a<span class="pl-k">=</span>[];<span class="pl-c1">document</span>.<span class="pl-c1">querySelectorAll</span>(<span class="pl-s"><span class="pl-pds">'</span>.title a<span class="pl-pds">'</span></span>).<span class="pl-c1">forEach</span>(<span class="pl-smi">l</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">a</span>.<span class="pl-c1">push</span>(<span class="pl-smi">l</span>.<span class="pl-c1">href</span>));<span class="pl-en">copy</span>(<span class="pl-smi">a</span>.<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">'</span><span class="pl-cce">\n</span><span class="pl-pds">'</span></span>));</pre></div>
+
+<p><em>Info: Clipboard support may not work with every Browser: <a href="http://caniuse.com/#feat=clipboard">http://caniuse.com/#feat=clipboard</a>.</em></p>
+
+<h4>
+<a id="solution-2-print-the-collected-links-to-the-console-via-consoledir" class="anchor" href="#solution-2-print-the-collected-links-to-the-console-via-consoledir" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution 2: Print the collected links to the console via console.dir</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">document</span>.<span class="pl-c1">querySelectorAll</span>(<span class="pl-s"><span class="pl-pds">'</span>.title a<span class="pl-pds">'</span></span>).<span class="pl-c1">forEach</span>(<span class="pl-smi">l</span> <span class="pl-k">=&gt;</span> <span class="pl-en">console</span>.<span class="pl-c1">dir</span>(<span class="pl-smi">l</span>.<span class="pl-c1">href</span>))</pre></div>
+
+<p>The tip to use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/dir">console.dir()</a> came from <a href="https://github.com/tucq88">tucq88</a> who run in some issues with to long URL's which Chrome shorten via "...".</p>
+
+<p><em>Info: console.dir is not an official standard yet it may or may not work in your current Browser.</em></p>
+
+<h4>
+<a id="solution-3-collect-the-links-and-print-the-array-object" class="anchor" href="#solution-3-collect-the-links-and-print-the-array-object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution 3: Collect the links and print the Array Object</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> a<span class="pl-k">=</span>[];<span class="pl-c1">document</span>.<span class="pl-c1">querySelectorAll</span>(<span class="pl-s"><span class="pl-pds">'</span>.title a<span class="pl-pds">'</span></span>).<span class="pl-c1">forEach</span>(<span class="pl-smi">l</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">a</span>.<span class="pl-c1">push</span>(<span class="pl-smi">l</span>.<span class="pl-c1">href</span>));<span class="pl-en">console</span>.<span class="pl-c1">log</span>(a);</pre></div>
+
+<h4>
+<a id="solution-4-print-collected-links-via-consolelog" class="anchor" href="#solution-4-print-collected-links-via-consolelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution 4: Print collected links via console.log</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">document</span>.<span class="pl-c1">querySelectorAll</span>(<span class="pl-s"><span class="pl-pds">'</span>.title a<span class="pl-pds">'</span></span>).<span class="pl-c1">forEach</span>(<span class="pl-smi">link</span> <span class="pl-k">=&gt;</span> <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">link</span>.<span class="pl-c1">href</span>))</pre></div>
+
+<p>This was the original solution but can cause problems with too long URL's which the Browser shorten between with "...".</p>
+
+<p>Save the collected links in a Textfile <code>list.txt</code> and run:</p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<p><code>youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt</code></p>
+
+<h1>
+<a id="contact--social-media" class="anchor" href="#contact--social-media" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact / Social Media</h1>
+
+<p><em>Get the latest News about Web Development, Open Source, Tooling, Server &amp; Security</em></p>
+
+<p><a href="https://twitter.com/frapsoft/"><img src="https://github.frapsoft.com/social/twitter.png" alt="Twitter"></a><a href="https://www.facebook.com/frapsoft/"><img src="https://github.frapsoft.com/social/facebook.png" alt="Facebook"></a><a href="https://plus.google.com/116540931335841862774"><img src="https://github.frapsoft.com/social/google-plus.png" alt="Google+"></a><a href="https://gitter.im/frapsoft/frapsoft/"><img src="https://github.frapsoft.com/social/gitter.png" alt="Gitter"></a><a href="https://github.com/ellerbrock/"><img src="https://github.frapsoft.com/social/github.png" alt="Github"></a></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p><a href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br></p>
+
+<p>This work by <a href="https://github.com/ellerbrock/">Maik Ellerbrock</a> is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ellerbrock/egghead-video-download">Egghead Video Download</a> is maintained by <a href="https://github.com/ellerbrock">ellerbrock</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
