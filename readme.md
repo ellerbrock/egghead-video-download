@@ -6,6 +6,14 @@ Please remember that these guys make a great job and invest lots of time to prov
 That said consider to support them for their great work and [Sign Up](https://egghead.io/users/sign_up) for a free account, follow them on [Twitter](https://twitter.com/eggheadio), share their content or whatever ...
 I'm traveling and the Hotel internet sucks hard, so i share this infos for others with slow and anoying internet connections.
 
+**Update:**
+
+I wrote a small npm Module [get-links](https://www.npmjs.com/package/get-links) to collect the links.  
+You pass the URL and a DOM selector and it will print the links via console.log.  
+You can find an example in the the [here](https://github.com/ellerbrock/egghead-video-download/tree/master/example).  
+I will publish a CLI version soon ...
+
+
 ## Installation
 
 ### Youtube Downloader
@@ -61,11 +69,24 @@ Save the collected links in a Textfile `list.txt` and run:
 
 `youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt`
 
+## Download for Pro-User
+
+*This Tip comes from [torfeld6](https://github.com/torfeld6)*
+
+Download Pro content without clicking through the whole playlist:
+
+`youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt --cookie ../cookies.txt`
+
+The cookies.txt can be downloaded via <https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg>
+
+*I don't have a Pro Account yet so i can't test it*
+
 # Contact / Social Media
 
 _Get the latest News about Web Development, Open Source, Tooling, Server & Security_
 
-[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)
+
+[![Github](https://github.frapsoft.com/social/github.png)](https://github.com/ellerbrock/)[![Docker](https://github.frapsoft.com/social/docker.png)](https://hub.docker.com/u/frapsoft/)[![npm](https://github.frapsoft.com/social/npm.png)](https://www.npmjs.com/~ellerbrock)[![Twitter](https://github.frapsoft.com/social/twitter.png)](https://twitter.com/frapsoft/)[![Facebook](https://github.frapsoft.com/social/facebook.png)](https://www.facebook.com/frapsoft/)[![Google+](https://github.frapsoft.com/social/google-plus.png)](https://plus.google.com/116540931335841862774)[![Gitter](https://github.frapsoft.com/social/gitter.png)](https://gitter.im/frapsoft/frapsoft/)
 
 ### License 
 
