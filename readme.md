@@ -8,11 +8,7 @@ I'm traveling and the Hotel internet sucks hard, so i share this infos for other
 
 **Update:**
 
-I wrote a small npm Module [get-links](https://www.npmjs.com/package/get-links) to collect the links.  
-You pass the URL and a DOM selector and it will print the links via console.log.  
-You can find an example in the the [here](https://github.com/ellerbrock/egghead-video-download/tree/master/example).  
-I will publish a CLI version soon ...
-
+I wrote a small npm module to automate this task: [get-links-cli](https://www.npmjs.com/package/get-links-cli).
 
 ## Installation
 
