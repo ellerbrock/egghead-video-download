@@ -1,3 +1,5 @@
+[![egghead-logo](https://raw.githubusercontent.com/eggheadio/egghead-brand/master/Egghead-Logo-Dark.png)](https://egghead.io/)
+
 # Egghead Video Download
 
 **Quick Introduction how to Download [Egghead Videos](https://egghead.io/) for Offline View.**
@@ -9,6 +11,19 @@ I'm traveling and the Hotel internet sucks hard, so i share this infos for other
 **Update:**
 
 I wrote a small npm module to automate this task: [get-links-cli](https://www.npmjs.com/package/get-links-cli).
+
+Example Usage: 
+
+```bash
+# Installation
+npm install -g get-links-cli
+
+# Collect Links
+get-links -u https://videourl-here.tld -c ".title a" -o list.txt
+
+# Download Videos
+youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt
+```
 
 ## Installation
 
