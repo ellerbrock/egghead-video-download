@@ -19,7 +19,7 @@ Example Usage:
 npm install -g get-links-cli
 
 # Collect Links
-get-links -u https://videourl-here.tld -c ".title a" -o list.txt
+get-links -u https://videourl-here.tld -c ".playlist-lessons-list a" -o list.txt
 
 # Download Videos
 youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt
@@ -42,7 +42,7 @@ youtube-dl -i -o "%(autonumber)s-%(title)s.%(ext)s" -a list.txt
 Execute the snippet and past it into a Textfile to download later via the Youtube Downloader.
 
 ```javascript
-let a=[];document.querySelectorAll('.title a').forEach(l => a.push(l.href));copy(a.join('\n'));
+let a=[];document.querySelectorAll('.playlist-lessons-list a').forEach(l => a.push(l.href));copy(a.join('\n'));
 ```
 *Info: Clipboard support may not work with every Browser: <http://caniuse.com/#feat=clipboard>.*
 
@@ -50,7 +50,7 @@ let a=[];document.querySelectorAll('.title a').forEach(l => a.push(l.href));copy
 #### Solution 2: Print the collected links to the console via console.dir
 
 ```javascript
-document.querySelectorAll('.title a').forEach(l => console.dir(l.href))
+document.querySelectorAll('.playlist-lessons-list a').forEach(l => console.dir(l.href))
 ```
 
 The tip to use [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir) came from [tucq88](https://github.com/tucq88) who run in some issues with to long URL's which Chrome shorten via "...".
@@ -61,14 +61,14 @@ The tip to use [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/
 #### Solution 3: Collect the links and print the Array Object
 
 ```javascript
-let a=[];document.querySelectorAll('.title a').forEach(l => a.push(l.href));console.log(a);
+let a=[];document.querySelectorAll('.playlist-lessons-list a').forEach(l => a.push(l.href));console.log(a);
 ```
 
 
 #### Solution 4: Print collected links via console.log
 
 ```javascript
-document.querySelectorAll('.title a').forEach(link => console.log(link.href))
+document.querySelectorAll('.playlist-lessons-list a').forEach(link => console.log(link.href))
 ```
 
 This was the original solution but can cause problems with too long URL's which the Browser shorten between with "...".
